@@ -1,18 +1,36 @@
 import React from "react";
-import { View, ScrollView, Text, Image, StyleSheet} from "react-native";
+import { View, ScrollView, Text, Image, StyleSheet } from "react-native";
+import DefaultButton from "../../Components/Common/DefaultButton";
+
+import { useNavigation } from "@react-navigation/native";
+
+import LifeStatus from "../../Components/Common/LifeStatus";
 
 
 export default function Start() {
+
+    const handleNavAppExplanation = ()=> {
+        console.log("Testando o clique");
+    };
 
     return (
         <View style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{alignItems: "center"}}>
-                    <Image source={require("../../assets/icons/logo3.png")}style={styles.logo}/>
-                    
+                    <Image
+                    source={require("../../assets/icons/logo3.png")}
+                    style={styles.logo}
+                    />
+                    <LifeStatus />
                     <Text style={styles.description}>
                         Vamos transformar sua vida {'\n'} em jogo , buscando sempre {"\n"}{" "} o melhor nível.
                     </Text>
+
+                    <DefaultButton buttonText={"Continuar"}
+                    handlePress={handleNavAppExplanation}
+                    width={250}
+                    height={50}/>
+
                 </View>
             </ScrollView>
         </View>
