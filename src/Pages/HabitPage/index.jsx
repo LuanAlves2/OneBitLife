@@ -1,9 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
 import React, {useState} from "react";
-import {View, Text, StyleSheet, Image, TOuchableOpacity, ScrollView, Alert} from "react-native";
+import {View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, Alert} from "react-native";
 
-export default function HabitPage(){
+export default function HabitPage({route}){
     const navigation = useNavigation();
+    const {cretate, habit} = route.params;
+
     return (
         <View style={styles.container}>
           <ScrollView>
