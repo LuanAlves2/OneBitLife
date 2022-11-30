@@ -2,11 +2,14 @@ import React from "react";
 import { ScrollView, View, Text, StyleSheet } from "react-native";
 import DefaultButton from "../../Components/Common/DefaultButton";
 import ExplanationCard from "../../Components/Explanation/ExplanationCard";
+import { useNavigation } from "@react-navigation/native";
 
 export default function AppExplanation(){
 
+    const navigation = useNavigation();
+
     function handleSetShowHome(){
-        console.log("Botão clicado! Funfando");
+        navigation.navigate("Home");
     }
 
     return(
