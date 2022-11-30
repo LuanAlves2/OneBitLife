@@ -20,7 +20,7 @@ export default function StatusBar(){
                 source={require("../../../assets/icons/moneyIcon.png")}
                 style={styles.icon}
                 />
-                <ProgressBar progress={1} color={"#85BB65"} style={styles.progress} />
+                <ProgressBar progress={0} color={"#85BB65"} style={styles.progress} />
             </View>
 
             <View style={styles.statusBarContainer}>
@@ -36,7 +36,7 @@ export default function StatusBar(){
                 source={require("../../../assets/icons/funIcon.png")}
                 style={styles.icon}
                 />
-                <ProgressBar progress={1} color={"#FEF723"} style={styles.progress} />
+                <ProgressBar progress={0} color={"#FEF723"} style={styles.progress} />
             </View>
         </View>
     );
